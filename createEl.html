@@ -44,12 +44,26 @@
 
         // 돔에 엘리먼트 제작 가능
         // document.createElement('엘리먼트명')
+        // 태그는 이름만 <>빼기, 클래스는 . 붙이기
         // 자동으로 박스 추가(댓글같은거)
 
-        const h1E1 = document.createElement('h1')
-        h1E1.innerHTML = "h태그를 만들었당ㅎㅅㅎ"
+        const wrapEl = document.querySelector('.wrap')
+        const boxEl_2 = document.querySelector('.box:nth-child(2)')
+        const h1El = document.createElement('h1')
+
+        h1El.innerHTML = "h태그를 만들었당ㅎㅅㅎ"
         // innerHTML 특정태그 안쪽으로 글자를 작성할 수 있음(= innerText)
-        console.log(h1E1)
+        console.log(wrapEl)
+
+        wrapEl.appendChild(h1El)
+        // 부모선택자.appendChild(자식선택자)
+        // 부모의 마지막 자식으로 추가시켜줌
+
+        wrapEl.removeChild(boxEl_2)
+        // 부모선택자.removeChild(자식선택자)
+        // 부모 안쪽의 자식을 삭제할 수 있음
+        // 박스 2번을 빼려면 박스 2를 변수로 지정하거나
+
 
         // debugger
         // 코드를 읽는 도중 디버거를 만나면 코드가 멈추고 디버깅을 할 수 있음
