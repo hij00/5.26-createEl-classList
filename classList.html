@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box{
+            width: 30%;
+            height: 400px;
+            background-color: gray;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .active{
+            background-color: navajowhite;
+        }
+
+    </style>
+
+    
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <script>
+
+        // const box_1 = document.querySelector('.box:first-child')
+        // const box_2 = document.querySelector('.box:nth-child(2)')
+        // 나중에 배열로 해서 가져오는 거 해보기~
+
+        // box_1.classList.add('active')
+        // active는 클래스지만 classlist에 클래스를 추가하니까 .을 붙이면 안됨
+
+        // 선택자.클래스.애드('클래스명')
+        // 선택자에 원하는 클래스를 추가 시킬 수 있음
+
+        
+
+        // box_2.classList.remove('box')
+        // 선택자.클래스리스트.리무브('클래스명')
+        // 선택자에 원하는 클래스를 제거할 수 있음
+        // => 속성값을 없애는 거
+    
+
+        // box_1.classList.toggle('active')
+        // add+remove를 동시에 사용
+        // 클래스가 없으면 추가, 있으면 삭제
+
+
+
+        // const boxAll = document.querySelectorAll('.box')
+        // boxAll.classList.add('active')
+
+
+        // 풀이=====================
+        const boxAll =document.querySelectorAll('.box')
+        
+        for(let i = 0; i < boxAll.length; i++){
+            boxAll[i].classList.add('active')
+        }
+
+
+        // const boxAll = document.querySelector('.wrap')
+        // boxAll.classList.add('active')
+
+
+        console.log(boxAll)
+
+    </script>
+
+</body>
+</html>
