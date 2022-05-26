@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box{
+            width: 30%;
+            height: 400px;
+            background-color: lightcoral;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <script>
+
+        // const wrapEl = document.querySelector('.wrap')
+        // const box_1 = document.querySelector('.box:nth-child(1)')
+
+        // const p1El = document.createElement('p')
+        // // console.log(p1El)
+        // const a1El = document.createElement('a')
+        // console.log(a1El)
+
+        // wrapEl.appendChild(p1El)
+        // p1El.appendChild(a1El)
+        // a1El.innerHTML = '네이버'
+        // a1El.setAttribute('href', 'http://naver.com')
+
+        // wrapEl.removeChild(box_1)
+
+        // ============================
+
+        const wrapEl = document.querySelector('.wrap')
+
+        const pEl = document.createElement('p')
+        pEl.innerHTML = '<a href="http://naver.com">네이버</a>'
+        // 따옴표와 쌍따옴표는 같이 쓸 수 없음, 백틱도 사용가능
+
+        wrapEl.appendChild(pEl)
+
+        wrapEl.removeChild(document.querySelector('.box:first-child'))
+        // 또 안 쓸거라면 이렇게 작성해도 ㄱㅊ, 또 쓸 것 같으면 변수로 잡기
+
+        
+        
+        
+        
+        console.log(pEl)
+
+
+    </script>
+    
+</body>
+</html>
